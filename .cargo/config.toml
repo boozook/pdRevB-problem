@@ -1,0 +1,27 @@
+[target.'cfg(target_family = "unix")']
+rustflags = ["-C", "target-cpu=native"]
+[target.'cfg(target_family = "windows")']
+rustflags = ["-C", "target-cpu=native"]
+[target.thumbv7em-none-eabihf]
+rustflags = [
+	"-Ctarget-cpu=cortex-m7",
+
+	# "-Clink-arg=--omagic",
+	"-Clink-args=--emit-relocs",
+	"-Crelocation-model=ropi-rwpi", # or pic?
+
+	"-L/usr/local/playdate/gcc-arm-none-eabi-9-2019-q4-major/arm-none-eabi/lib",
+	"-Clink-args=-L/usr/local/playdate/gcc-arm-none-eabi-9-2019-q4-major/arm-none-eabi/lib",
+]
+
+
+# [unstable]
+# unstable-options = true
+# config-include = true
+# check-cfg = ["features", "names", "values", "output"]
+# panic-abort-tests = true
+
+
+# [env]
+# PLAYDATE_SDK_PATH = "~/Developer/Toolchains/PlaydateSDK-1.13.7"
+# https://doc.rust-lang.org/cargo/reference/config.html#env

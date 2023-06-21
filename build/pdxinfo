@@ -1,0 +1,5 @@
+name=Test
+author=Author
+description=...description...
+bundleID=pdrs.revB.test
+version=0.1.0

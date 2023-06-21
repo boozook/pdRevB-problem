@@ -1,0 +1,11 @@
+[target.thumbv7em-none-eabihf]
+rustflags = [
+	"-Ctarget-cpu=cortex-m7",
+
+	# "-Clink-arg=--omagic",
+	"-Clink-args=--emit-relocs",
+	"-Crelocation-model=ropi-rwpi", # or pic?
+
+	"-L/usr/local/playdate/gcc-arm-none-eabi-9-2019-q4-major/arm-none-eabi/lib",
+	"-Clink-args=-L/usr/local/playdate/gcc-arm-none-eabi-9-2019-q4-major/arm-none-eabi/lib",
+]
