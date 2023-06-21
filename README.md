@@ -1,6 +1,11 @@
+This is dummy isolated example for reproduce problem with probably wrong relocation table, but 🤷🏻‍♂️
+
 ### Build
 
-To build & reproduce you need rust toolchain.
+To build & reproduce you need:
+- rust toolchain
+- Playdate SDK 2.0
+- env var `PLAYDATE_SDK_PATH` pointing to Playdate SDK dir.
 
 ```bash
 ./build.sh
